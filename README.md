@@ -18,7 +18,7 @@ with the following schema/DDL:
 "order" (id INTEGER  NOT NULL PRIMARY KEY, order_date DATE  NOT NULL, order_hour VARCHAR(16) NOT NULL, member_id INTEGER  NOT NULL references member(id), restaurant_id INTEGER  NOT NULL references restaurant(id), total_order VARCHAR(18) NOT NULL);
 "order_meals" (id INTEGER  NOT NULL PRIMARY KEY, order_id INTEGER  NOT NULL references "order"(id), meal_id  INTEGER  NOT NULL references meal(id));
 ```
-For the natural language queries to SQL, I have ued GPT4 from OpenAI and can ask questions such as:
+For the natural language queries to SQL, I have used GPT4 from OpenAI and can ask questions such as:
    - Which cities and dates do the members make the most orders. Show top 10
    - What is the ratio of meal types in restaurants in each city?
    - What is the ratio of the orders in cities with the most Italian restaurants?
